@@ -1,5 +1,5 @@
 modLoader = "javafml"
-loaderVersion = "[43,)"
+loaderVersion = "[36,)"
 license = "LGPL-3.0-only"
 
 issueTrackerURL = "https://github.com/AbdElAziz333/Saturn/issues"
@@ -20,13 +20,13 @@ A performance mod designed to optimize Minecraft's memory usage
 [[dependencies.saturn]]
 modId = "forge"
 mandatory = true
-versionRange = "[43,)"
+versionRange = "[36,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.saturn]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.19.2,)"
+versionRange = "[1.16.5,)"
 ordering = "NONE"
 side = "BOTH"
