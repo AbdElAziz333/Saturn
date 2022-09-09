@@ -8,10 +8,6 @@
 
 Saturn is a free and open-source performance optimization mod for Minecraft Forge that optimizes Minecraft's memoy usage, It works on both the **client and server**, and **doesn't require the mod to be installed on both sides, However, the benefits of running Saturn are pretty small as of the moment.
 
-### Installation
-
-### Configuration
-
 ### License
 
 Canary is licensed under GNU LGPLv3, a free and open-source license. For more information, please see the
