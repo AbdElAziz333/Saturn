@@ -2,8 +2,9 @@
 
 # Saturn for Minecraft Forge
 
-
+![Github License](https://img.shields.io/github/license/AbdElAziz333/Saturn)
 ![Github Issues](https://img.shields.io/github/issues/AbdElAziz333/Saturn)
+![Curseforge Downloads](https://cf.way2muchnoise.eu/670986.svg)
 
 Saturn is a free and open-source performance optimization mod for Minecraft Forge that optimizes Minecraft's memoy usage, It works on both the **client and server**, and **doesn't require the mod to be installed on both sides, However, the benefits of running Saturn are pretty small as of the moment.
 
