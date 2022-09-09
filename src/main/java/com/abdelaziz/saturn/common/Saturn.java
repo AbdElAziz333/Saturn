@@ -1,4 +1,4 @@
-package com.abdelaziz.saturn;
+package com.abdelaziz.saturn.common;
 
 import net.minecraftforge.fml.common.Mod;
 import org.apache.logging.log4j.LogManager;
