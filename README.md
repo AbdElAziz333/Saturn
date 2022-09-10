@@ -25,6 +25,6 @@ You can either install this through a package manager such as Chocolatey on Wind
 Gradle 7 or newer (optional)
 The Gradle wrapper is provided in this repository can be used instead of installing a suitable version of Gradle yourself. However, if you are building many projects, you may prefer to install it yourself through a suitable package manager as to save disk space and to avoid many Gradle daemons sitting around in memory.
 Building with Gradle
-Canary uses a typical Gradle project structure and can be built by simply running the default build task. After Gradle finishes building the project, you can find the build artifacts (typical mod binaries, and their sources) in build/libs.
+Saturn uses a typical Gradle project structure and can be built by simply running the default build task. After Gradle finishes building the project, you can find the build artifacts (typical mod binaries, and their sources) in build/libs.
 
 Tip: If this is a one-off build, and you would prefer the Gradle daemon does not stick around in memory afterwards, try adding the --no-daemon flag to ensure that the daemon is torn down after the build is complete. However, subsequent builds of the project will start more slowly if the Gradle daemon is not available to be re-used.
