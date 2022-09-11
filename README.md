@@ -10,7 +10,7 @@ Saturn is a free and open-source performance mod for Minecraft Forge designed to
 
 ### License
 
-Canary is licensed under GNU LGPLv3, a free and open-source license. For more information, please see the
+Saturn is licensed under GNU LGPLv3, a free and open-source license. For more information, please see the
 [license file](LICENSE.txt).
 
 ### Issues and Feature Requests
