@@ -6,7 +6,7 @@ issueTrackerURL = "https://github.com/AbdElAziz333/Saturn/issues"
 
 [[mods]]
 modId = "saturn"
-version = "${version}"
+version = "${file.jarVersion}"
 displayName = "Saturn"
 # updateJSONURL="https://changeme.dev/updates.json"
 displayURL = "https://www.curseforge.com/minecraft/mc-mods/saturn"
@@ -27,6 +27,6 @@ side = "BOTH"
 [[dependencies.saturn]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.18.2,)"
+versionRange = "[1.18.2,1.19)"
 ordering = "NONE"
 side = "BOTH"

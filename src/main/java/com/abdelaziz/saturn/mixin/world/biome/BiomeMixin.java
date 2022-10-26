@@ -2,7 +2,7 @@ package com.abdelaziz.saturn.mixin.world.biome;
 
 import com.abdelaziz.saturn.common.world.biome.SaturnTemperatureCache;
 import it.unimi.dsi.fastutil.longs.Long2FloatLinkedOpenHashMap;
-import net.minecraft.world.biome.Biome;
+import net.minecraft.world.level.biome.Biome;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
