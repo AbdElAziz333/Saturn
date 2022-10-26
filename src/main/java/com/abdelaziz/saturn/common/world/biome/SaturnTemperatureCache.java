@@ -1,7 +1,7 @@
 package com.abdelaziz.saturn.common.world.biome;
 
 import it.unimi.dsi.fastutil.longs.Long2FloatLinkedOpenHashMap;
-import net.minecraft.util.Util;
+import net.minecraft.Util;
 
 public class SaturnTemperatureCache {
     public static final ThreadLocal<Long2FloatLinkedOpenHashMap> saturnTemperatureCache = ThreadLocal.withInitial(() ->
