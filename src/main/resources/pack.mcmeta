@@ -1,7 +1,8 @@
 {
   "pack": {
-    "description": "Resources for saturn",
+    "description": "saturn resources",
     "pack_format": 9,
-    "_comment": "pack_format 9 is the current format for Minecraft 1.19.2. Be aware may have changed by the time you use this template!"
+    "forge:resource_pack_format": 9,
+    "forge:data_pack_format": 10
   }
 }
