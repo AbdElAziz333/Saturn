@@ -1,6 +1,5 @@
 package com.abdelaziz.saturn.mixin.world.biome;
 
-import com.abdelaziz.saturn.common.world.biome.SaturnTemperatureCache;
 import it.unimi.dsi.fastutil.longs.Long2FloatLinkedOpenHashMap;
 import net.minecraft.Util;
 import net.minecraft.world.level.biome.Biome;
