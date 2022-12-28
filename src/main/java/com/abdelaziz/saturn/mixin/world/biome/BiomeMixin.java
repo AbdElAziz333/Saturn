@@ -34,6 +34,6 @@ public class BiomeMixin {
             )
     )
     private ThreadLocal<Long2FloatLinkedOpenHashMap> staticThreadLocal(Supplier<?> supplier) {
-        return SaturnTemperatureCache.saturnTemperatureCache;
+        return saturnTemperatureCache;
     }
 }
