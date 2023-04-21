@@ -31,7 +31,7 @@ public abstract class BiomeMixin {
                     value = "RETURN"
             )
     )
-    private void removeTemperatureCache(Biome.ClimateSettings climateSettings, BiomeSpecialEffects effects, BiomeGenerationSettings generationSettings, MobSpawnSettings spawnSettings, CallbackInfo ci) {
+    private void removeTemperatureCache(Biome.ClimateSettings climateSettings, Biome.BiomeCategory biomeCategory, BiomeSpecialEffects specialEffects, BiomeGenerationSettings generationSettings, MobSpawnSettings spawnSettings, CallbackInfo ci) {
         //remove the temperature cache size value as it unused
         TEMPERATURE_CACHE_SIZE = 0;
     }
