@@ -8,13 +8,13 @@ issueTrackerURL = "https://github.com/AbdElAziz333/Saturn/issues"
 modId = "saturn"
 version = "${file.jarVersion}"
 displayName = "Saturn"
-# updateJSONURL="https://changeme.dev/updates.json"
+updateJSONURL="https://github.com/AbdElAziz333/Saturn/raw/mc1.19.2/dev/updates.json"
 displayURL = "https://www.curseforge.com/minecraft/mc-mods/saturn"
 logoFile = "logo.png"
 credits="AbdElAziz"
 authors="AbdElAziz"
 description = '''
-A performance mod designed to optimize Minecraft's memory usage
+A performance mod designed to optimize Minecraft's memory usage.
 '''
 
 [[dependencies.saturn]]
