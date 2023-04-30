@@ -8,7 +8,7 @@
   "minVersion": "0.8.2",
   "refmap": "saturn.refmap.json",
   "mixins": [
-    "world.biome.BiomeMixin"
+    "world.temperature_cache.BiomeMixin"
   ],
   "client": []
 }
