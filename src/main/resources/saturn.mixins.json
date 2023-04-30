@@ -8,6 +8,8 @@
   "minVersion": "0.8.2",
   "refmap": "saturn.refmap.json",
   "mixins": [
+    "ai.brain.clear_memories.BrainMixin",
+    "ai.brain.clear_memories.LivingEntityMixin",
     "world.temperature_cache.BiomeMixin"
   ],
   "client": []
