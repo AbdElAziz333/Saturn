@@ -3,12 +3,15 @@
   "package": "com.abdelaziz.saturn.mixin",
   "compatibilityLevel": "JAVA_17",
   "minVersion": "0.8.2",
-  "refmap": "smoothboot.refmap.json",
+  "refmap": "saturn.refmap.json",
   "injectors": {
     "defaultRequire": 1
   },
   "mixins": [
-    "world.biome.BiomeMixin"
+    "ai.brain.clear_memories.BrainMixin",
+    "ai.brain.clear_memories.LivingEntityMixin",
+    "world.temperature_cache.BiomeMixin"
   ],
-  "client": []
+  "client": [
+  ]
 }
