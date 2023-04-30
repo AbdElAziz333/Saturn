@@ -10,7 +10,6 @@
   "mixins": [
     "ai.brain.clear_memories.BrainMixin",
     "ai.brain.clear_memories.LivingEntityMixin",
-    "util.strong_interner.TagKeyMixin",
     "world.temperature_cache.BiomeMixin"
   ],
   "client": [
