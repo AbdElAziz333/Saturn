@@ -12,5 +12,7 @@
     "ai.brain.clear_memories.LivingEntityMixin",
     "world.temperature_cache.BiomeMixin"
   ],
-  "client": []
+  "client": [
+    "util.read_resource.TextureUtilMixin"
+  ]
 }
