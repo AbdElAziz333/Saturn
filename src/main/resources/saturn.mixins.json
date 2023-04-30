@@ -13,5 +13,7 @@
     "util.strong_interner.TagKeyMixin",
     "world.temperature_cache.BiomeMixin"
   ],
-  "client": []
+  "client": [
+    "util.read_resource.TextureUtilMixin"
+  ]
 }
