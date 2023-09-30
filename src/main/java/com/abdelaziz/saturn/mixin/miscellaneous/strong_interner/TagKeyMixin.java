@@ -3,25 +3,30 @@ package com.abdelaziz.saturn.mixin.miscellaneous.strong_interner;
 import com.google.common.collect.Interner;
 import com.google.common.collect.Interners;
 import net.minecraft.tags.TagKey;
+import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Mutable;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Redirect;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(TagKey.class)
 public class TagKeyMixin {
+    @Shadow @Final @Mutable
+    private static Interner<TagKey<?>> VALUES;
 
     /**
      * @reason Fix memory leak in TagKey creation.
      * @author AbdElAziz
      * */
-    @Redirect(
-            method = "<clinit>",
+    @Inject(
+            method = "<init>",
             at = @At(
-                    value = "INVOKE",
-                    target = "Lcom/google/common/collect/Interners;newStrongInterner()Lcom/google/common/collect/Interner;"
+                    value = "TAIL"
             )
     )
-    private static <E> Interner<E> useWeakInterner() {
-        return Interners.newWeakInterner();
+    private void useWeakInterner(CallbackInfo ci) {
+        VALUES = Interners.newWeakInterner();
     }
 }
