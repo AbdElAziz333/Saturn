@@ -4,6 +4,7 @@
   "compatibilityLevel": "JAVA_17",
   "minVersion": "0.8.2",
   "refmap": "saturn.refmap.json",
+  "plugin": "com.abdelaziz.saturn.mixin.SaturnMixinPlugin",
   "injectors": {
     "defaultRequire": 1
   },
