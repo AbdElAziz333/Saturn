@@ -10,10 +10,10 @@
   "mixins": [
     "ai.brain.clear_memories.BrainMixin",
     "ai.brain.clear_memories.LivingEntityMixin",
-    "util.strong_interner.TagKeyMixin",
+    "miscellaneous.strong_interner.TagKeyMixin",
     "world.temperature_cache.BiomeMixin"
   ],
   "client": [
-    "util.read_resource.TextureUtilMixin"
+    "miscellaneous.read_resource.TextureUtilMixin"
   ]
 }

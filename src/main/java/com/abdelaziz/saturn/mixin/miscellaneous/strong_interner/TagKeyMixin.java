@@ -1,4 +1,4 @@
-package com.abdelaziz.saturn.mixin.util.strong_interner;
+package com.abdelaziz.saturn.mixin.miscellaneous.strong_interner;
 
 import com.google.common.collect.Interner;
 import com.google.common.collect.Interners;
