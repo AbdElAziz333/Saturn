@@ -32,7 +32,7 @@ public abstract class BiomeMixin {
      * */
     @Deprecated
     @Overwrite
-    public float getTemperature(BlockPos pos) {
+    private float getTemperature(BlockPos pos) {
         return getHeightAdjustedTemperature(pos);
     }
 }
