@@ -6,9 +6,14 @@
     "defaultRequire": 1
   },
   "minVersion": "0.8.2",
+  "plugin": "com.abdelaziz.saturn.mixin.SaturnMixinPlugin",
   "refmap": "saturn.refmap.json",
   "mixins": [
-    "world.biome.BiomeMixin"
+    "allocations.vec2.Vec2Mixin",
+    "world.temperature_cache.BiomeMixin",
+    "world.threading_detector.PalettedContainerMixin"
   ],
-  "client": []
+  "client": [
+    "allocations.view_area.ViewAreaMixin"
+  ]
 }
