@@ -31,6 +31,11 @@ public class SaturnMixinPlugin implements IMixinConfigPlugin {
             return false;
         }
 
+        if (LoadingModList.get().getModFileById("canary") != null &&
+        mixinClassName.startsWith(SATURN_MIXINS_PATH + "world.threading_detector")) {
+            return false;
+        }
+
         return true;
     }
 
