@@ -11,7 +11,8 @@
   "mixins": [
     "ai.brain.clear_memories.BrainMixin",
     "ai.brain.clear_memories.LivingEntityMixin",
-    "world.temperature_cache.BiomeMixin"
+    "world.temperature_cache.BiomeMixin",
+    "world.threading_detector.PalettedContainerMixin"
   ],
   "client": [
     "miscellaneous.read_resource.TextureUtilMixin"
