@@ -13,6 +13,6 @@
     "world.temperature_cache.BiomeMixin"
   ],
   "client": [
-    "util.read_resource.TextureUtilMixin"
+    "miscellaneous.read_resource.TextureUtilMixin"
   ]
 }
