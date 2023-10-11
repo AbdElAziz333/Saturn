@@ -21,8 +21,8 @@ public abstract class BrainMixin<E extends LivingEntity> implements ClearableMem
 
     @Override
     public void clearMemories() {
-        this.memories.keySet().forEach((p) -> {
-            this.memories.put(p, Optional.empty());
-        });
+        for(MemoryModuleType<?> memoryModuleType : this.memories.keySet()) {
+            this.memories.put(memoryModuleType, Optional.empty());
+        }
     }
 }

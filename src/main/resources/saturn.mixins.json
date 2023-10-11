@@ -6,13 +6,17 @@
     "defaultRequire": 1
   },
   "minVersion": "0.8.2",
+  "plugin": "com.abdelaziz.saturn.mixin.SaturnMixinPlugin",
   "refmap": "saturn.refmap.json",
   "mixins": [
     "ai.brain.clear_memories.BrainMixin",
     "ai.brain.clear_memories.LivingEntityMixin",
-    "world.temperature_cache.BiomeMixin"
+    "allocations.vec2.Vec2Mixin",
+    "world.temperature_cache.BiomeMixin",
+    "world.threading_detector.PalettedContainerMixin"
   ],
   "client": [
-    "util.read_resource.TextureUtilMixin"
+    "allocations.view_area.ViewAreaMixin",
+    "miscellaneous.read_resource.TextureUtilMixin"
   ]
 }
