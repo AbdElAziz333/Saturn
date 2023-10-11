@@ -11,10 +11,12 @@
   "mixins": [
     "ai.brain.clear_memories.BrainMixin",
     "ai.brain.clear_memories.LivingEntityMixin",
+    "allocations.vec2.Vec2Mixin",
     "world.temperature_cache.BiomeMixin",
     "world.threading_detector.PalettedContainerMixin"
   ],
   "client": [
+    "allocations.view_area.ViewAreaMixin",
     "miscellaneous.read_resource.TextureUtilMixin"
   ]
 }
