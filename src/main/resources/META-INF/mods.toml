@@ -1,32 +1,30 @@
 modLoader = "javafml"
-loaderVersion = "[45,)"
-license = "LGPL-3.0-only"
+loaderVersion = "${loader_version_range}"
+license = "${mod_license}"
 
 issueTrackerURL = "https://github.com/AbdElAziz333/Saturn/issues"
 
 [[mods]]
-modId = "saturn"
-version = "${file.jarVersion}"
-displayName = "Saturn"
-updateJSONURL="https://github.com/AbdElAziz333/Saturn/raw/mc1.19.2/dev/updates.json"
+modId = "${mod_id}"
+version = "${mod_version}"
+displayName = "${mod_name}"
+updateJSONURL="https://github.com/AbdElAziz333/Saturn/raw/mc1.20.1/dev/updates.json"
 displayURL = "https://legacy.curseforge.com/minecraft/mc-mods/saturn"
 logoFile = "logo.png"
-credits="AbdElAziz"
-authors="AbdElAziz"
-description = '''
-A performance mod designed to optimize Minecraft's memory usage.
-'''
+credits = "${mod_authors}"
+authors = "${mod_authors}"
+description = '''${mod_description}'''
 
-[[dependencies.saturn]]
+[[dependencies.${mod_id}]]
 modId = "forge"
 mandatory = true
-versionRange = "[45,)"
+versionRange = "${forge_version_range}"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.saturn]]
+[[dependencies.${mod_id}]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.19.4,1.20)"
+versionRange = "${minecraft_version_range}"
 ordering = "NONE"
 side = "BOTH"
