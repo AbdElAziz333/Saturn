@@ -21,12 +21,12 @@ public class TagKeyMixin {
      * @author AbdElAziz
      * */
     @Inject(
-            method = "<init>",
+            method = "<clinit>",
             at = @At(
                     value = "TAIL"
             )
     )
-    private void useWeakInterner(CallbackInfo ci) {
+    private static void useWeakInterner(CallbackInfo ci) {
         VALUES = Interners.newWeakInterner();
     }
 }
