@@ -9,7 +9,6 @@
   "plugin": "com.abdelaziz.saturn.mixin.SaturnMixinPlugin",
   "refmap": "saturn.refmap.json",
   "mixins": [
-    "allocations.vec2.Vec2Mixin",
     "world.temperature_cache.BiomeMixin",
     "world.threading_detector.PalettedContainerMixin"
   ],
