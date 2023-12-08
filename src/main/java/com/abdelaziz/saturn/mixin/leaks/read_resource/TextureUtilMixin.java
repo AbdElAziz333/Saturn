@@ -1,4 +1,4 @@
-package com.abdelaziz.saturn.mixin.miscellaneous.read_resource;
+package com.abdelaziz.saturn.mixin.leaks.read_resource;
 
 import com.mojang.blaze3d.platform.TextureUtil;
 import org.lwjgl.system.MemoryUtil;

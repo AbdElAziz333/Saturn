@@ -1,4 +1,4 @@
-package com.abdelaziz.saturn.mixin.world.temperature_cache;
+package com.abdelaziz.saturn.mixin.leaks.biome_temperature_cache;
 
 import it.unimi.dsi.fastutil.longs.Long2FloatLinkedOpenHashMap;
 import net.minecraft.core.BlockPos;
@@ -10,7 +10,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(Biome.class)
 public abstract class BiomeMixin {
-
     @Shadow
     protected abstract float getHeightAdjustedTemperature(BlockPos pos);
 
