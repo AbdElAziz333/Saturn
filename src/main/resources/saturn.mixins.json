@@ -9,14 +9,25 @@
     "defaultRequire": 1
   },
   "mixins": [
-    "ai.brain.clear_memories.BrainMixin",
-    "ai.brain.clear_memories.LivingEntityMixin",
-    "miscellaneous.strong_interner.TagKeyMixin",
-    "world.temperature_cache.BiomeMixin",
-    "world.threading_detector.PalettedContainerMixin"
+    "gc_heap.forge_events.ForgeHooksClientMixin",
+    "gc_heap.unnecessary_object_creation.EntityCollisionContextMixin",
+    "gc_heap.unnecessary_object_creation.EntityFlagsPredicateMixin",
+    "gc_heap.unnecessary_object_creation.EntityPredicateMixin",
+    "gc_heap.unnecessary_object_creation.ItemPredicateMixin",
+    "gc_heap.unnecessary_object_creation.MobEffectsPredicateMixin",
+    "gc_heap.unnecessary_object_creation.PointFreeMixin",
+    "gc_heap.unnecessary_object_creation.PotentialSpawnsMixin",
+    "gc_heap.unnecessary_object_creation.TypeMixin",
+    "leaks.clear_memories.BrainMixin",
+    "leaks.clear_memories.LivingEntityMixin",
+    "leaks.weak_interner.TagKeyMixin",
+    "leaks.biome_temperature_cache.BiomeMixin",
+    "leaks.ticking_tracker.DynamicGraphMinFixedPointMixin",
+    "leaks.ticking_tracker.TickingTrackerMixin",
+    "miscellaneous.threading_detector.PalettedContainerMixin"
   ],
   "client": [
-    "allocations.view_area.ViewAreaMixin",
-    "miscellaneous.read_resource.TextureUtilMixin"
+    "gc_heap.unnecessary_object_creation.ViewAreaMixin",
+    "leaks.read_resource.TextureUtilMixin"
   ]
 }

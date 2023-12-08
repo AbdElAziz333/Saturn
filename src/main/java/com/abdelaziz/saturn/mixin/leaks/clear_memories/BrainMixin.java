@@ -1,4 +1,4 @@
-package com.abdelaziz.saturn.mixin.ai.brain.clear_memories;
+package com.abdelaziz.saturn.mixin.leaks.clear_memories;
 
 import com.abdelaziz.saturn.common.ai.brain.ClearableMemory;
 import net.minecraft.world.entity.ai.Brain;

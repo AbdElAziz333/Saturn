@@ -1,4 +1,4 @@
-package com.abdelaziz.saturn.mixin.allocations.view_area;
+package com.abdelaziz.saturn.mixin.gc_heap.unnecessary_object_creation;
 
 import net.minecraft.client.renderer.LevelRenderer;
 import net.minecraft.client.renderer.ViewArea;

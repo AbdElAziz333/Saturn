@@ -1,4 +1,4 @@
-package com.abdelaziz.saturn.mixin.world.threading_detector;
+package com.abdelaziz.saturn.mixin.miscellaneous.threading_detector;
 
 import net.minecraft.util.ThreadingDetector;
 import net.minecraft.world.level.chunk.PalettedContainer;
@@ -7,9 +7,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-/**
- * Profiler shows ThreadingDetector is duplicated so much.
- * */
 @Mixin(PalettedContainer.class)
 public class PalettedContainerMixin {
     @Shadow @Final @Mutable
