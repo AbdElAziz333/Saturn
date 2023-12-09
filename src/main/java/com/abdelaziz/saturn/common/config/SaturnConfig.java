@@ -5,8 +5,6 @@ import org.apache.commons.lang3.tuple.Pair;
 
 public class SaturnConfig {
     public static final String SATURN_GITHUB_ISSUE_TRACKER = "https://github.com/AbdElAziz333/Saturn/issues";
-    public static final ForgeConfigSpec SPEC;
-    public static final SaturnCommon COMMON;
 
     public static class SaturnCommon {
         //Memory Leak Fixes
@@ -64,6 +62,9 @@ public class SaturnConfig {
             builder.pop();
         }
     }
+
+    public static final ForgeConfigSpec SPEC;
+    public static final SaturnCommon COMMON;
 
     static {
         final Pair<SaturnCommon, ForgeConfigSpec> pair = new ForgeConfigSpec.Builder().configure(SaturnCommon::new);

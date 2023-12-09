@@ -35,14 +35,6 @@ public class ForgeHooksClientMixin {
      * @author AbdElAziz
      * */
     @Overwrite(remap = false)
-    @Deprecated(forRemoval = true, since = "1.18.2")
-    public static void dispatchRenderLast(LevelRenderer context, PoseStack poseStack, float partialTick, Matrix4f projectionMatrix, long finishTimeNano) {}
-
-    /**
-     * @reason Remove object creation.
-     * @author AbdElAziz
-     * */
-    @Overwrite(remap = false)
     public static void dispatchRenderStage(RenderLevelStageEvent.Stage stage, LevelRenderer levelRenderer, PoseStack poseStack, Matrix4f projectionMatrix, int renderTick, Camera camera, Frustum frustum) {}
 
     /**
@@ -69,18 +61,4 @@ public class ForgeHooksClientMixin {
     public static boolean renderSpecificFirstPersonArm(PoseStack poseStack, MultiBufferSource multiBufferSource, int packedLight, AbstractClientPlayer player, HumanoidArm arm) {
         return false;
     }
-
-    /**
-     * @reason Remove object creation.
-     * @author AbdElAziz
-     * */
-    @Overwrite(remap = false)
-    public static void onBlockColorsInit(BlockColors blockColors) {}
-
-    /**
-     * @reason Remove object creation.
-     * @author AbdElAziz
-     * */
-    @Overwrite(remap = false)
-    public static void onItemColorsInit(ItemColors itemColors, BlockColors blockColors) {}
 }
