@@ -12,7 +12,6 @@ public class MixinConfigChecks {
     public static boolean checkModCompatibilities(String mixinClassName) {
         if (LoadingModList.get().getModFileById("memoryleakfix") != null &&
                 mixinClassName.startsWith(MIXIN_PATH + "leaks.clear_memories") &&
-                mixinClassName.startsWith(MIXIN_PATH + "leaks.weak_interner") &&
                 mixinClassName.startsWith(MIXIN_PATH + "leaks.read_resource") &&
                 mixinClassName.startsWith(MIXIN_PATH + "leaks.biome_temperature_cache")) {
             return false;
@@ -41,10 +40,6 @@ public class MixinConfigChecks {
         }
 
         if (MixinConfigChecks.isTickingTrackerLeakFixEnabled(mixinClassName, !SaturnConfig.COMMON.TICKING_TRACKER_LEAK_FIX.get())) {
-            return false;
-        }
-
-        if (MixinConfigChecks.isWeakInternerLeakFixEnabled(mixinClassName, !SaturnConfig.COMMON.WEAK_INTERNER_LEAK_FIX.get())) {
             return false;
         }
 
@@ -89,14 +84,6 @@ public class MixinConfigChecks {
 
     public static boolean isTickingTrackerLeakFixEnabled(String mixinClassName, boolean value) {
         if (mixinClassName.startsWith(MIXIN_PATH + "leak_fix.ticking_tracker") && !value) {
-            return false;
-        } else {
-            return true;
-        }
-    }
-
-    public static boolean isWeakInternerLeakFixEnabled(String mixinClassName, boolean value) {
-        if (mixinClassName.startsWith(MIXIN_PATH + "leak_fix.weak_interner") && !value) {
             return false;
         } else {
             return true;

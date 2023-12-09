@@ -12,7 +12,6 @@ public class SaturnConfig {
         //Memory Leak Fixes
         public final ForgeConfigSpec.BooleanValue CLEAR_MEMORIES_LEAK_FIX;
         public final ForgeConfigSpec.BooleanValue READ_RESOURCE_LEAK_FIX;
-        public final ForgeConfigSpec.BooleanValue WEAK_INTERNER_LEAK_FIX;
         public final ForgeConfigSpec.BooleanValue BIOME_TEMPERATURE_CACHE_LEAK_FIX;
         public final ForgeConfigSpec.BooleanValue TICKING_TRACKER_LEAK_FIX;
 
@@ -41,10 +40,6 @@ public class SaturnConfig {
             TICKING_TRACKER_LEAK_FIX =
                     builder.comment("Set this to true to enable ticking tracker leak fix.")
                             .define("tickingTrackerLeakFix", true);
-
-            WEAK_INTERNER_LEAK_FIX =
-                    builder.comment("Set this to true to enable weak interner leak fix.")
-                            .define("weakInternerLeakFix", true);
 
             builder.pop();
             builder.push("Reduce Garbage Collection (GC) Heap Optimizations");

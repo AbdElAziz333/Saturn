@@ -20,7 +20,6 @@
     "gc_heap.unnecessary_object_creation.TypeMixin",
     "leaks.clear_memories.BrainMixin",
     "leaks.clear_memories.LivingEntityMixin",
-    "leaks.weak_interner.TagKeyMixin",
     "leaks.biome_temperature_cache.BiomeMixin",
     "leaks.ticking_tracker.DynamicGraphMinFixedPointMixin",
     "leaks.ticking_tracker.TickingTrackerMixin",
