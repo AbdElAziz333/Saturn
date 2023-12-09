@@ -1,6 +1,6 @@
 package com.abdelaziz.saturn.mixin;
 
-import net.minecraftforge.fml.loading.LoadingModList;
+import com.abdelaziz.saturn.common.config.MixinConfigChecks;
 import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
@@ -9,8 +9,6 @@ import java.util.List;
 import java.util.Set;
 
 public class SaturnMixinPlugin implements IMixinConfigPlugin {
-    private static final String SATURN_MIXINS_PATH = "com.abdelaziz.saturn.mixin.";
-
     @Override
     public void onLoad(String mixinPackage) {
 
@@ -23,17 +21,7 @@ public class SaturnMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-        if (LoadingModList.get().getModFileById("memoryleakfix") != null &&
-                mixinClassName.startsWith(SATURN_MIXINS_PATH + "world.temperature_cache")) {
-            return false;
-        }
-
-        if (LoadingModList.get().getModFileById("canary") != null &&
-                mixinClassName.startsWith(SATURN_MIXINS_PATH + "world.threading_detector")) {
-            return false;
-        }
-
-        return true;
+        return MixinConfigChecks.applyChecks(mixinClassName);
     }
 
     @Override

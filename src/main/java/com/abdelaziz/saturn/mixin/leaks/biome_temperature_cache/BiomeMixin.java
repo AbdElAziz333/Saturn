@@ -1,4 +1,4 @@
-package com.abdelaziz.saturn.mixin.world.temperature_cache;
+package com.abdelaziz.saturn.mixin.leaks.biome_temperature_cache;
 
 import it.unimi.dsi.fastutil.longs.Long2FloatLinkedOpenHashMap;
 import net.minecraft.core.BlockPos;
@@ -22,8 +22,8 @@ public abstract class BiomeMixin {
                     value = "TAIL"
             )
     )
-    private void nullThreadLocal(CallbackInfo callbackInfo) {
-        temperatureCache = null;
+    private void nullThreadLocal(CallbackInfo ci) {
+        this.temperatureCache = null;
     }
 
     /**

@@ -1,4 +1,4 @@
-package com.abdelaziz.saturn.mixin.world.threading_detector;
+package com.abdelaziz.saturn.mixin.miscellaneous.threading_detector;
 
 import net.minecraft.util.ThreadingDetector;
 import net.minecraft.world.level.chunk.PalettedContainer;
@@ -40,4 +40,3 @@ public class PalettedContainerMixin {
     @Overwrite
     public void release() {}
 }
-
