@@ -43,20 +43,6 @@ public class ForgeHooksClientMixin {
      * @author AbdElAziz
      * */
     @Overwrite(remap = false)
-    public static void dispatchRenderStage(RenderLevelStageEvent.Stage stage, LevelRenderer levelRenderer, PoseStack poseStack, Matrix4f projectionMatrix, int renderTick, Camera camera, Frustum frustum) {}
-
-    /**
-     * @reason Remove object creation.
-     * @author AbdElAziz
-     * */
-    @Overwrite(remap = false)
-    public static void dispatchRenderStage(RenderType renderType, LevelRenderer levelRenderer, PoseStack poseStack, Matrix4f projectionMatrix, int renderTick, Camera camera, Frustum frustum) {}
-
-    /**
-     * @reason Remove object creation.
-     * @author AbdElAziz
-     * */
-    @Overwrite(remap = false)
     public static boolean renderSpecificFirstPersonHand(InteractionHand hand, PoseStack poseStack, MultiBufferSource bufferSource, int packedLight, float partialTick, float interpPitch, float swingProgress, float equipProgress, ItemStack stack) {
         return false;
     }
@@ -69,18 +55,4 @@ public class ForgeHooksClientMixin {
     public static boolean renderSpecificFirstPersonArm(PoseStack poseStack, MultiBufferSource multiBufferSource, int packedLight, AbstractClientPlayer player, HumanoidArm arm) {
         return false;
     }
-
-    /**
-     * @reason Remove object creation.
-     * @author AbdElAziz
-     * */
-    @Overwrite(remap = false)
-    public static void onBlockColorsInit(BlockColors blockColors) {}
-
-    /**
-     * @reason Remove object creation.
-     * @author AbdElAziz
-     * */
-    @Overwrite(remap = false)
-    public static void onItemColorsInit(ItemColors itemColors, BlockColors blockColors) {}
 }

@@ -10,13 +10,7 @@
   },
   "mixins": [
     "gc_heap.forge_events.ForgeHooksClientMixin",
-    "gc_heap.unnecessary_object_creation.EntityCollisionContextMixin",
-    "gc_heap.unnecessary_object_creation.EntityFlagsPredicateMixin",
-    "gc_heap.unnecessary_object_creation.EntityPredicateMixin",
-    "gc_heap.unnecessary_object_creation.ItemPredicateMixin",
-    "gc_heap.unnecessary_object_creation.MobEffectsPredicateMixin",
     "gc_heap.unnecessary_object_creation.PointFreeMixin",
-    "gc_heap.unnecessary_object_creation.PotentialSpawnsMixin",
     "gc_heap.unnecessary_object_creation.TypeMixin",
     "leaks.clear_memories.BrainMixin",
     "leaks.clear_memories.LivingEntityMixin",
