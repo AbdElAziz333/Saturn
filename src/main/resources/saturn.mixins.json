@@ -18,14 +18,10 @@
     "gc_heap.unnecessary_object_creation.PointFreeMixin",
     "gc_heap.unnecessary_object_creation.PotentialSpawnsMixin",
     "gc_heap.unnecessary_object_creation.TypeMixin",
-    "leaks.weak_interner.TagKeyMixin",
     "leaks.biome_temperature_cache.BiomeMixin",
-    "leaks.ticking_tracker.DynamicGraphMinFixedPointMixin",
-    "leaks.ticking_tracker.TickingTrackerMixin",
     "miscellaneous.threading_detector.PalettedContainerMixin"
   ],
   "client": [
-    "gc_heap.unnecessary_object_creation.ViewAreaMixin",
-    "leaks.read_resource.TextureUtilMixin"
+    "gc_heap.unnecessary_object_creation.ViewAreaMixin"
   ]
 }
