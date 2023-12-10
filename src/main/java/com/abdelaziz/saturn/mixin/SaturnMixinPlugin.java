@@ -37,10 +37,6 @@ public class SaturnMixinPlugin implements IMixinConfigPlugin {
             return false;
         }
 
-        if (mixinClassName.startsWith(MIXIN_PATH + "gc_heap.forge_events") && !SaturnConfig.COMMON.UNNECESSARY_FORGE_EVENTS.get()) {
-            return false;
-        }
-
         if (mixinClassName.startsWith(MIXIN_PATH + "gc_heap.unnecessary_object_creation") && !SaturnConfig.COMMON.UNNECESSARY_OBJECT_CREATION.get()) {
             return false;
         }

@@ -12,7 +12,6 @@ public class SaturnConfig {
 
         //Reduce Garbage Collection (GC) Heap Optimizations
         public final ForgeConfigSpec.BooleanValue UNNECESSARY_OBJECT_CREATION;
-        public final ForgeConfigSpec.BooleanValue UNNECESSARY_FORGE_EVENTS;
 
         //Miscellaneous
         public final ForgeConfigSpec.BooleanValue THREADING_DETECTOR_LOCK;
@@ -30,9 +29,6 @@ public class SaturnConfig {
 
             UNNECESSARY_OBJECT_CREATION = builder.comment("Avoid unnecessary object creation")
                     .define("avoidUnnecessaryObjectCreation", true);
-
-            UNNECESSARY_FORGE_EVENTS = builder.comment("Disable some of the unnecessary forge events")
-                    .define("disableUnnecessaryForgeEvents", true);
 
             builder.pop();
             builder.push("Miscellaneous");
