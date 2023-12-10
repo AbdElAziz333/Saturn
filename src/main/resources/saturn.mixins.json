@@ -9,7 +9,6 @@
     "defaultRequire": 1
   },
   "mixins": [
-    "gc_heap.forge_events.ForgeHooksClientMixin",
     "gc_heap.unnecessary_object_creation.PointFreeMixin",
     "gc_heap.unnecessary_object_creation.TypeMixin",
     "leaks.clear_memories.BrainMixin",
