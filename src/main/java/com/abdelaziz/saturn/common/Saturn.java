@@ -1,6 +1,5 @@
 package com.abdelaziz.saturn.common;
 
-import com.abdelaziz.saturn.common.config.SaturnConfig;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -13,8 +12,7 @@ public class Saturn {
     public static final String MOD_ID = "saturn";
     public static final Logger LOGGER = LogManager.getLogger();
 
-    public Saturn() {
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, SaturnConfig.SPEC);
+    /*public Saturn() {
         MinecraftForge.EVENT_BUS.register(this);
-    }
+    }*/
 }
