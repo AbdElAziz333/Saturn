@@ -26,7 +26,7 @@ public class SaturnMixinPlugin implements IMixinConfigPlugin {
             return false;
         }
 
-        if ((mixinClassName.startsWith(MIXIN_PATH + "miscellaneous.threading_detector") || mixinClassName.startsWith(MIXIN_PATH + "leaks.biome_temperature_cache")) &&
+        if ((mixinClassName.startsWith(MIXIN_PATH + "miscellaneous.threading_detector") || mixinClassName.startsWith(MIXIN_PATH + "leaks.biome_temperature_cache") || mixinClassName.startsWith(MIXIN_PATH + "allocations.composter")) &&
                 (FMLLoader.getLoadingModList().getModFileById("canary") != null || FMLLoader.getLoadingModList().getModFileById("radium") != null)) {
             return false;
         }
