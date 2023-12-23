@@ -1,7 +1,8 @@
 package com.abdelaziz.saturn.mixin.allocations.entity.run_one;
 
 import com.abdelaziz.saturn.common.util.constants.EntityConstants;
-import net.minecraft.world.entity.ai.behavior.DoNothing;
+import net.minecraft.world.entity.PathfinderMob;
+import net.minecraft.world.entity.ai.behavior.RunOne;
 import net.minecraft.world.entity.animal.allay.AllayAi;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -15,10 +16,10 @@ public class AllayAiMixin {
             method = "initIdleActivity",
             at = @At(
                     value = "NEW",
-                    target = "(II)Lnet/minecraft/world/entity/ai/behavior/DoNothing;"
+                    target = "(Ljava/util/List;)Lnet/minecraft/world/entity/ai/behavior/RunOne;"
             )
     )
-    private static DoNothing useStaticFinalReference(int p_22840_, int p_22841_) {
-        return EntityConstants.DO_NOTHING;
+    private static RunOne<PathfinderMob> useStaticFinalReference(List<?> list) {
+        return EntityConstants.ALLAY;
     }
 }
