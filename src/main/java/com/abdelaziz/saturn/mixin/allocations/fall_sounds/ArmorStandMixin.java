@@ -1,6 +1,6 @@
 package com.abdelaziz.saturn.mixin.allocations.fall_sounds;
 
-import com.abdelaziz.saturn.common.util.constants.EntityConstants;
+import com.abdelaziz.saturn.common.util.constants.FallSoundConstants;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.decoration.ArmorStand;
 import org.spongepowered.asm.mixin.Mixin;
@@ -14,6 +14,6 @@ public class ArmorStandMixin {
      * */
     @Overwrite
     public LivingEntity.Fallsounds getFallSounds() {
-        return EntityConstants.ARMOR_STAND;
+        return FallSoundConstants.ARMOR_STAND;
     }
 }
