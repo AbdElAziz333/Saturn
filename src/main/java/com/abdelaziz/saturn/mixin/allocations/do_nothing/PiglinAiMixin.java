@@ -1,6 +1,6 @@
-package com.abdelaziz.saturn.mixin.allocations.entity.do_nothing;
+package com.abdelaziz.saturn.mixin.allocations.do_nothing;
 
-import com.abdelaziz.saturn.common.util.constants.EntityConstants;
+import com.abdelaziz.saturn.common.util.constants.DoNothingConstants;
 import net.minecraft.world.entity.ai.behavior.DoNothing;
 import net.minecraft.world.entity.monster.piglin.PiglinAi;
 import org.spongepowered.asm.mixin.Mixin;
@@ -20,6 +20,6 @@ public class PiglinAiMixin {
             )
     )
     private static DoNothing useStaticFinalReference(int minDuration, int maxDuration) {
-        return EntityConstants.CACHED_DO_NOTHING;
+        return DoNothingConstants.DO_NOTHING;
     }
 }

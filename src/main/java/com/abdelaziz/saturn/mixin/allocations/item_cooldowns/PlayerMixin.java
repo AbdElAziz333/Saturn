@@ -1,4 +1,4 @@
-package com.abdelaziz.saturn.mixin.allocations.entity.item_cooldowns;
+package com.abdelaziz.saturn.mixin.allocations.item_cooldowns;
 
 import com.abdelaziz.saturn.common.util.constants.EntityConstants;
 import net.minecraft.world.entity.player.Player;

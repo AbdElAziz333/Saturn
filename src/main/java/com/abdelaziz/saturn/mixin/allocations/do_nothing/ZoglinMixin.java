@@ -1,6 +1,6 @@
-package com.abdelaziz.saturn.mixin.allocations.entity.do_nothing;
+package com.abdelaziz.saturn.mixin.allocations.do_nothing;
 
-import com.abdelaziz.saturn.common.util.constants.EntityConstants;
+import com.abdelaziz.saturn.common.util.constants.DoNothingConstants;
 import net.minecraft.world.entity.ai.behavior.DoNothing;
 import net.minecraft.world.entity.monster.Zoglin;
 import org.spongepowered.asm.mixin.Mixin;
@@ -17,6 +17,6 @@ public class ZoglinMixin {
             )
     )
     private static DoNothing useStaticFinalReferences(int p_22840_, int p_22841_) {
-        return EntityConstants.CACHED_DO_NOTHING;
+        return DoNothingConstants.DO_NOTHING;
     }
 }
