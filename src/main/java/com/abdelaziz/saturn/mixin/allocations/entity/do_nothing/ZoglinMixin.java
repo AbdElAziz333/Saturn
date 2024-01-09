@@ -1,13 +1,11 @@
-package com.abdelaziz.saturn.mixin.allocations.entity.run_one;
+package com.abdelaziz.saturn.mixin.allocations.entity.do_nothing;
 
 import com.abdelaziz.saturn.common.util.constants.EntityConstants;
-import net.minecraft.world.entity.ai.behavior.RunOne;
+import net.minecraft.world.entity.ai.behavior.DoNothing;
 import net.minecraft.world.entity.monster.Zoglin;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
-
-import java.util.List;
 
 @Mixin(Zoglin.class)
 public class ZoglinMixin {
@@ -15,10 +13,10 @@ public class ZoglinMixin {
             method = "initIdleActivity",
             at = @At(
                     value = "NEW",
-                    target = "(Ljava/util/List;)Lnet/minecraft/world/entity/ai/behavior/RunOne;"
+                    target = "(II)Lnet/minecraft/world/entity/ai/behavior/DoNothing;"
             )
     )
-    private static RunOne<?> useStaticFinalReference(List<?> list) {
-        return EntityConstants.ZOGLIN;
+    private static DoNothing useStaticFinalReferences(int p_22840_, int p_22841_) {
+        return EntityConstants.CACHED_DO_NOTHING;
     }
 }
