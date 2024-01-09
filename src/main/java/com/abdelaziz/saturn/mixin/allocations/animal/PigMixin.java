@@ -1,4 +1,4 @@
-package com.abdelaziz.saturn.mixin.allocations.entity.animal;
+package com.abdelaziz.saturn.mixin.allocations.animal;
 
 import com.abdelaziz.saturn.common.util.constants.SaturnConstants;
 import net.minecraft.world.entity.animal.Pig;

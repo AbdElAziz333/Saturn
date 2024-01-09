@@ -1,4 +1,4 @@
-package com.abdelaziz.saturn.mixin.allocations.entity.fall_sounds;
+package com.abdelaziz.saturn.mixin.allocations.fall_sounds;
 
 import com.abdelaziz.saturn.common.util.constants.EntityConstants;
 import net.minecraft.world.entity.LivingEntity;
