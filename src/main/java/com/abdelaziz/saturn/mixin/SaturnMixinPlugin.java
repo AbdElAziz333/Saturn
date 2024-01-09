@@ -23,7 +23,15 @@ public class SaturnMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-        if ((mixinClassName.startsWith(MIXIN_PATH + "leaks.biome_temperature_cache") || mixinClassName.startsWith(MIXIN_PATH + "leaks.clear_memories") || mixinClassName.startsWith(MIXIN_PATH + "leaks.read_resource") || mixinClassName.startsWith(MIXIN_PATH + "leaks.weak_interner")) && (FMLLoader.getLoadingModList().getModFileById("memoryleakfix") != null)) {
+        if (
+                (
+                        mixinClassName.startsWith(MIXIN_PATH + "leaks.biome_temperature_cache") ||
+                        mixinClassName.startsWith(MIXIN_PATH + "leaks.clear_memories") ||
+                        mixinClassName.startsWith(MIXIN_PATH + "leaks.read_resource") ||
+                        mixinClassName.startsWith(MIXIN_PATH + "leaks.weak_interner")
+                ) &&
+                        (FMLLoader.getLoadingModList().getModFileById("memoryleakfix") != null)
+        ) {
             return false;
         }
 
@@ -32,7 +40,7 @@ public class SaturnMixinPlugin implements IMixinConfigPlugin {
             return false;
         }
 
-        if (mixinClassName.startsWith(MIXIN_PATH + "leaks.ticking_tracker") && (FMLLoader.getLoadingModList().getModFileById("memoryleakfix") != null)) {
+        if (mixinClassName.startsWith(MIXIN_PATH + "leaks.ticking_tracker") && (FMLLoader.getLoadingModList().getModFileById("radon") != null)) {
             return false;
         }
 
