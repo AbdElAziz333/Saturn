@@ -8,9 +8,13 @@ import org.apache.logging.log4j.Logger;
 @Mod(Saturn.MOD_ID)
 public class Saturn {
     public static final String MOD_ID = "saturn";
-    public static final Logger LOGGER = LogManager.getLogger();
+    private static final Logger LOGGER = LogManager.getLogger();
 
-    /*public Saturn() {
+    public Saturn() {
         MinecraftForge.EVENT_BUS.register(this);
-    }*/
+    }
+
+    public static Logger getLogger() {
+        return LOGGER;
+    }
 }
