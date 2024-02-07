@@ -12,6 +12,8 @@
     "allocations.animal.PigMixin",
     "allocations.animal.SheepMixin",
     "allocations.animal.StriderMixin",
+    "allocations.advancements.AdvancementRewardsBuilderMixin",
+    "allocations.advancements.AdvancementRewardsMixin",
     "allocations.composter.ComposterBlockMixin$EmptyContainerMixin",
     "allocations.composter.ComposterBlockMixin$InputContainerMixin",
     "allocations.composter.ComposterBlockMixin$OutputContainerMixin",
