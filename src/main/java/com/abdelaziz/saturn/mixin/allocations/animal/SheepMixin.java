@@ -13,7 +13,7 @@ public class SheepMixin {
      * @author AbdElAziz
      * */
     @Overwrite
-    private static float[] createSheepColor(DyeColor color) {
+    public static float[] createSheepColor(DyeColor color) {
         if (color == DyeColor.WHITE) {
             return EntityConstants.WHITE_SHEEP_COLOR;
         } else {
