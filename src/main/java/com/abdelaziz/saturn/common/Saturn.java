@@ -8,11 +8,10 @@ import org.apache.logging.log4j.Logger;
 @Mod(Saturn.MOD_ID)
 public class Saturn {
     public static final String MOD_ID = "saturn";
-    private static final Logger LOGGER = LogManager.getLogger("Saturn");
+    private static final Logger LOGGER = LogManager.getLogger();
 
     public Saturn() {
         MinecraftForge.EVENT_BUS.register(this);
-        getLogger().info("This client launches with Saturn, a performance mod designed to optimize Minecraft's memory usage.");
     }
 
     public static Logger getLogger() {
