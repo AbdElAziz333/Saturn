@@ -9,6 +9,8 @@
     "defaultRequire": 1
   },
   "mixins": [
+    "allocations.advancements.AdvancementRewardsBuilderMixin",
+    "allocations.advancements.AdvancementRewardsMixin",
     "allocations.composter.ComposterBlockMixin$EmptyContainerMixin",
     "allocations.composter.ComposterBlockMixin$InputContainerMixin",
     "allocations.composter.ComposterBlockMixin$OutputContainerMixin",

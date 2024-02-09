@@ -1,6 +1,10 @@
 package com.abdelaziz.saturn.mixin;
 
-import net.minecraftforge.fml.loading.FMLLoader;
+import com.abdelaziz.saturn.common.Saturn;
+import com.abdelaziz.saturn.common.compat.ModCompat;
+import com.abdelaziz.saturn.common.config.ConfigBuilder;
+import com.abdelaziz.saturn.common.config.Option;
+import com.abdelaziz.saturn.common.config.SaturnOptions;
 import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
@@ -13,7 +17,7 @@ public class SaturnMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public void onLoad(String mixinPackage) {
-
+        ConfigBuilder.build();
     }
 
     @Override
@@ -23,28 +27,14 @@ public class SaturnMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-        if (
-                (
-                        mixinClassName.startsWith(MIXIN_PATH + "leaks.biome_temperature_cache") ||
-                        mixinClassName.startsWith(MIXIN_PATH + "leaks.clear_memories") ||
-                        mixinClassName.startsWith(MIXIN_PATH + "leaks.read_resource") ||
-                        mixinClassName.startsWith(MIXIN_PATH + "leaks.weak_interner")
-                ) &&
-                        (FMLLoader.getLoadingModList().getModFileById("memoryleakfix") != null)
-        ) {
-            return false;
+        for (Option option : SaturnOptions.getOptions()) {
+            if (ConfigBuilder.getFileConfig().get(option.name()).toString().equals("false") && mixinClassName.startsWith(MIXIN_PATH + option.mixinClassPath())) {
+                Saturn.getLogger().debug("Mixin " + mixinClassName + " is disabled by the config!");
+                return false;
+            }
         }
 
-        if ((mixinClassName.startsWith(MIXIN_PATH + "miscellaneous.threading_detector") || mixinClassName.startsWith(MIXIN_PATH + "leaks.biome_temperature_cache")) &&
-                (FMLLoader.getLoadingModList().getModFileById("canary") != null || FMLLoader.getLoadingModList().getModFileById("radium") != null)) {
-            return false;
-        }
-
-        if (mixinClassName.startsWith(MIXIN_PATH + "leaks.ticking_tracker") && (FMLLoader.getLoadingModList().getModFileById("radon") != null)) {
-            return false;
-        }
-
-        return true;
+        return ModCompat.applyModCompatibilities(mixinClassName);
     }
 
     @Override
