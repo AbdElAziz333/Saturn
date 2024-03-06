@@ -22,6 +22,10 @@ public class ModCompat {
             return false;
         }
 
+        if (FMLLoader.getLoadingModList().getModFileById("radon") != null && (mixinClassName.startsWith(MIXIN_PATH + "leaks.ticking_tracker"))) {
+            return false;
+        }
+
         return true;
     }
 }
